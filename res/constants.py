@@ -1,4 +1,4 @@
 channels = [
-    {"Munosib sahifa": "https://t.me/munosib_sahifa"},
+    {"IELTS Support": "https://t.me/Fayzulloh_Gulomov"},
     {"eLoving daily": "https://t.me/eLoving_daily"}
 ]
