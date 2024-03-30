@@ -1,15 +1,15 @@
 from telebot import TeleBot
 from telebot.apihelper import ApiTelegramException
 
-from components.CustomInlineMarkup import CustomInlineMarkup
-from components.Utils import get_channel_name
+from Utils import get_channel_name
 
-from components.CustomKeyboardMarkup import CustomKeyboardMarkup
+from CustomInlineMarkup import CustomInlineMarkup
+from CustomKeyboardMarkup import CustomKeyboardMarkup
 
-from res.strings import Strings
-from res.constants import channels
+from strings import Strings
+from constants import channels
 
-from data.ReferralSystemDBManager import ReferralSystemDBManager as db
+from ReferralSystemDBManager import ReferralSystemDBManager as db
 
 
 class Bot:
@@ -118,8 +118,8 @@ class Bot:
                 )
 
             elif message.text == "📕Kurs haqida":
-                self.bot.send_photo(message.chat.id, open("../res/images/about_course_1.jpg", 'rb'))
-                self.bot.send_photo(message.chat.id, open("../res/images/about_course_2.jpg", 'rb'))
+                self.bot.send_photo(message.chat.id, open("about_course_1.jpg", 'rb'))
+                self.bot.send_photo(message.chat.id, open("about_course_2.jpg", 'rb'))
 
             elif message.text == "🧮Takliflarim soni":
                 self.bot.send_message(

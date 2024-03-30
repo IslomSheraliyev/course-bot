@@ -1,5 +1,5 @@
 import sqlite3
-from data.ReferralSystemDBUtils import ReferralSystemDBUtils as db
+import ReferralSystemDBUtils as db
 
 
 class ReferralSystemDBManager(object):
