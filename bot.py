@@ -24,7 +24,7 @@ class Bot:
 
         self.bot.send_photo(
             message.chat.id,
-            photo=open("../res/images/banner.jpg", "rb"),
+            photo=open("banner.jpg", "rb"),
             caption=Strings.get_start_text(message.from_user.first_name),
             parse_mode="HTML"
         )
@@ -87,7 +87,7 @@ class Bot:
         self.bot.delete_message(call.message.chat.id, self.description_msg)
         self.bot.send_photo(
             call.message.chat.id,
-            photo=open('../res/images/banner.jpg', 'rb'),
+            photo=open('banner.jpg', 'rb'),
             caption=Strings.get_referral_caption(call.message.chat.id),
             parse_mode="HTML"
         )
