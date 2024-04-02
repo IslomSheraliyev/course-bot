@@ -1,11 +1,11 @@
 class Strings(object):
 
     @staticmethod
-    def get_token():
+    def token():
         return "7168101617:AAGkoYuT8xTMBhCfjfCDDwZiRI8UKjk7m_8"
 
     @staticmethod
-    def get_start_text(name: str):
+    def start_text(name: str):
         return f"""<b>Assalomu alaykum, {name}
 
 Bu bot sizga 👇
@@ -13,19 +13,19 @@ Bu bot sizga 👇
 ✨ MAXSUS BEPUL SPEAKING darslariga qatnasha olishingiz uchun alohida kanal linkini beradi 👇</b>"""
 
     @staticmethod
-    def get_subscribe_text():
+    def subscribe_text():
         return f"<b>Faqat YOPIQ KANAL linkini olish uchun quyidagi kanallarimizga obuna bo'lishingiz talab etiladi ✅</b>"
 
     @staticmethod
-    def get_not_subscribed_text():
+    def not_subscribed_text():
         return f"ℹ️ Iltimos ko'rsatilgan kanallarning barchasiga obuna bo'ling!"
 
     @staticmethod
-    def get_check_button_text():
+    def check_button_text():
         return f"✅ Tekshirish"
 
     @staticmethod
-    def get_referral_text():
+    def referral_text():
         return """<b>‼️Diqqat bilan o'qing 👇
 
 🫵 Speaking balingizni bir oy davomida
@@ -42,15 +42,15 @@ Qatnashish uchun 👇
 Quyidagi <code>📎Taklif qilish havolasini olish</code> tugmasini bosib, do'stlaringizni taklif qilishni boshlang👇</b>"""
 
     @staticmethod
-    def get_referral_button_text():
+    def referral_button_text():
         return "📎Taklif qilish havolasini olish"
 
     @staticmethod
-    def get_referral():
+    def referral():
         return "Havola"
 
     @staticmethod
-    def get_referral_caption(id):
+    def referral_caption(id):
         return f"""<b>⚡️IELTS SPEAKING band 9.0 va band 8.0
 egalari tomonidan o'tkaziladigan bir oylik 
 BEPUL ONLINE SPEAKING MARATHON 
@@ -64,7 +64,7 @@ Kursga qatnashish : 👇
 """
 
     @staticmethod
-    def send_you_referred(name: str):
+    def you_referred(name: str):
         return f"""<b>Siz taklif qilgan do'stingiz {name} botimizga tashrif buyurdi 😊
 
 Do'stingiz barcha kanallarimizga a'zo bo'lsa, taklif qilgan do'stlaringiz soni yana bittaga ortadi 🤗</b>"""
@@ -74,28 +74,29 @@ Do'stingiz barcha kanallarimizga a'zo bo'lsa, taklif qilgan do'stlaringiz soni y
         return "<b>✅ Barcha kanallarga a'zo bo'ldingiz</b>"
 
     @staticmethod
-    def about_teachers():
-        return """<b>👩‍🏫🧑‍🏫 𝗨𝘀𝘁𝗼𝘇𝗹𝗮𝗿 : 👇
-
-👩‍🏫 𝗠𝗶𝘀𝘀 𝗔𝘀𝗮𝗹𝘅𝗼𝗻 IELTS 8.5
-( Speaking 9.0 )
-👩‍🏫 𝗠𝗶𝘀𝘀 𝗥𝘂𝘅𝘀𝗵𝗼𝗻𝗮 IELTS 8.5
-( Speaking 9.0 )
-🧑‍🏫 𝗠𝗿 𝗠𝗶𝗰𝗵𝗮𝗲𝗹 IELTS 8.5
-( Speaking 8.0 )
-
-𝗜𝗘𝗟𝗧𝗦 𝘃𝗮 𝗖𝗘𝗙𝗥 𝗦𝗽𝗲𝗮𝗸𝗶𝗻𝗴 𝗱𝗮𝗿𝘀𝗹𝗮𝗿𝗶𝗻𝗶 𝗯𝗶𝘇 𝗯𝗶𝗹𝗮𝗻 𝗕𝗘𝗣𝗨𝗟 𝗼'𝗿𝗴𝗮𝗻𝗶𝗻𝗴 🫵</b>"""
+    def about_asilbek():
+        return """<b>Asilbek Yusupov
+IELTS 9.0 (Speaking 9.0)</b>"""
 
     @staticmethod
-    def get_refs_count(count):
+    def about_fayzulloh():
+        return """<b>Fayzulloh Gulomov
+IELTS 8.0 (Reading 9.0)</b>"""
+
+    @staticmethod
+    def refs_count(count):
         return f"""<b>🗣Takliflaringiz soni : {count} ta
 
 Marraga yana {5 - count if count < 5 else 0} ta taklif qoldi 🏆</b>"""
 
     @staticmethod
-    def get_ask_name():
+    def ask_name():
         return "<b>ℹ️ Iltimos ismingizni yuboring...</b>"
 
     @staticmethod
-    def get_ask_number():
+    def ask_number():
         return "<b>📞 Iltimos telefon raqamingizni yuboring...</b>"
+
+    @staticmethod
+    def join_private_channel():
+        return """<b>🥳 Tabriklaymiz, bizni maxsus kanalga qo'shilishingiz mumkin!</b>"""
