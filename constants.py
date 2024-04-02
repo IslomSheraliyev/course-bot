@@ -1,4 +1,4 @@
 channels = [
-    {"IELTS Support": "https://t.me/Fayzulloh_Gulomov"},
-    {"eLoving daily": "https://t.me/eLoving_daily"}
+    {"Channel 1": "https://t.me/qalbim_egasi_gulim"},
+    {"Channel 2": "https://t.me/eLoving_daily"}
 ]

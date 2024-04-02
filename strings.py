@@ -90,4 +90,12 @@ Do'stingiz barcha kanallarimizga a'zo bo'lsa, taklif qilgan do'stlaringiz soni y
     def get_refs_count(count):
         return f"""<b>🗣Takliflaringiz soni : {count} ta
 
-Marraga yana {5 - count} ta taklif qoldi 🏆</b>"""
+Marraga yana {5 - count if count < 5 else 0} ta taklif qoldi 🏆</b>"""
+
+    @staticmethod
+    def get_ask_name():
+        return "<b>ℹ️ Iltimos ismingizni yuboring...</b>"
+
+    @staticmethod
+    def get_ask_number():
+        return "<b>📞 Iltimos telefon raqamingizni yuboring...</b>"

@@ -18,11 +18,12 @@ class ReferralSystemDBManager(object):
                 connection.close()
 
     @staticmethod
-    def increment_referral_count(user_id: str):
+    def increment_referral_count(user_id, name, number):
         try:
             connection = sqlite3.connect('refs.db')
             cursor = connection.cursor()
-            cursor.execute(db.increment_referral_count(), (user_id, user_id))
+            # Pass user_id twice, once for the initial insertion and once for the WHERE clause
+            cursor.execute(db.increment_referral_count(), (user_id, name, number, user_id))
             connection.commit()
         except sqlite3.Error as e:
             print("Error incrementing referral count:", e)
@@ -31,12 +32,11 @@ class ReferralSystemDBManager(object):
                 connection.close()
 
     @staticmethod
-    def create_user(user_id: str):
+    def create_user(user_id: str, name: str, number: str):
         try:
-            print(user_id)
             connection = sqlite3.connect('refs.db')
             cursor = connection.cursor()
-            cursor.execute(db.create_user(), (user_id,))
+            cursor.execute(db.create_user(), (user_id, name, number))
             connection.commit()
         except sqlite3.Error as e:
             print("Error creating user:", e)
@@ -86,6 +86,36 @@ class ReferralSystemDBManager(object):
             connection.commit()
         except sqlite3.Error as e:
             print("Error clearing table:", e)
+        finally:
+            if connection:
+                connection.close()
+
+    @staticmethod
+    def get_user_name_by_id(user_id):
+        try:
+            connection = sqlite3.connect('refs.db')
+            cursor = connection.cursor()
+            cursor.execute(db.get_user_name_by_id(user_id), (user_id,))
+            result = cursor.fetchone()
+            return result[0] if result else None
+        except sqlite3.Error as e:
+            print("Error fetching user by id:", e)
+            return None
+        finally:
+            if connection:
+                connection.close()
+
+    @staticmethod
+    def get_user_number_by_id(user_id):
+        try:
+            connection = sqlite3.connect('refs.db')
+            cursor = connection.cursor()
+            cursor.execute(db.get_user_number_by_id(user_id), (user_id,))
+            result = cursor.fetchone()
+            return result[0] if result else None
+        except sqlite3.Error as e:
+            print("Error fetching user by id:", e)
+            return None
         finally:
             if connection:
                 connection.close()
