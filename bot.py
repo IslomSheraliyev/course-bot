@@ -35,6 +35,8 @@ class Bot:
             self.join_private_chat(message.chat.id)
         elif self.is_subscribed(message.chat.id):
             self.get_referral_link(message)
+            if not self.db.is_user_logged(message.chat.id):
+                self.db.create_user(message.chat.id, str(self.name), str(self.number))
         else:
             self.subscribe_text(message)
 
