@@ -2,7 +2,7 @@ class Strings(object):
 
     @staticmethod
     def token():
-        return "7168101617:AAGkoYuT8xTMBhCfjfCDDwZiRI8UKjk7m_8"
+        return "7089323478:AAFsR1iSNiV9F5sHtfcrFig7ZTZNlZIfnGw"
 
     @staticmethod
     def start_text(name: str):

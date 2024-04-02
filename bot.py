@@ -31,7 +31,6 @@ class Bot:
 
     def get_phone_number(self, message):
         self.number = message.text
-        # self.db.create_user(message.chat.id, str(self.name), str(self.number))
         if self.from_user == key:
             self.join_private_chat(message.chat.id)
         elif self.is_subscribed(message.chat.id):
@@ -149,12 +148,14 @@ class Bot:
                 self.bot.send_photo(message.chat.id, open("about_course_2.jpg", 'rb'))
 
             elif message.text == "🧮Takliflarim soni":
+                c = db.get_refs_count(message.chat.id)
                 self.bot.send_message(
                     message.chat.id,
-                    Strings.refs_count(db.get_refs_count(message.chat.id)),
+                    Strings.refs_count(c),
                     parse_mode="HTML"
                 )
-                self.join_private_chat(message.chat.id)
+                if c >= 5:
+                    self.join_private_chat(message.chat.id)
 
         @self.bot.callback_query_handler(func=lambda call: True)
         def callback_query_handler(call):

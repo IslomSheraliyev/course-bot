@@ -1,6 +1,6 @@
 channels = [
-    # {"Channel 1": "https://t.me/qalbim_egasi_gulim"},
-    {"Channel 2": "https://t.me/eLoving_daily"}
+    {"Fayzulloh Gulomov": "https://t.me/Fayzulloh_Gulomov"},
+    {"Asilbek Yusupov": "https://t.me/AY_IELTS"}
 ]
 
-key = "oG1EjSYR3ufKWx8AZXtLb6Jg7WVZmPcFB9HOTdQ2DvihlqMK4NsRnyEawI5pU0G1EjSYR3ufKWx8AZXtLb6Jg7WVZmPcFB9HOTdQ2DvihlqMK4NsRnyEawI5pU0G1EjSYR3ufKWx8AZXtLb6Jg7WVZmPcFB9HOTdQ2DvihlqMK4NsRnyEawI5pU0G1EjSYR3ufKWx8AZXtLb6Jg7WVZmPcFB9HOTdQ2DvihlqMK4NsRnyEawI5pU0"
+key = "1980653792"
