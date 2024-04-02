@@ -166,8 +166,6 @@ class Bot:
                         name = self.db.get_user_name_by_id(call.message.chat.id)
                         number = self.db.get_user_number_by_id(call.message.chat.id)
                         self.db.increment_referral_count(self.from_user, name, number)
-                        if self.db.get_refs_count(self.from_user) >= 1:
-                            self.join_private_chat(call.message.chat.id)
 
                     if self.db.is_user_logged(call.message.chat.id):
                         self.db.create_user(str(call.message.chat.id), str(self.name), str(self.number))
