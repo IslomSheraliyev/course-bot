@@ -160,6 +160,17 @@ class Bot:
                         self.bot.create_chat_invite_link(self.private_chat_id, member_limit=1).invite_link)}
                 )
             )
+            self.bot.send_message(
+                chat_id,
+                "✅",
+                parse_mode="HTML",
+                reply_markup=CustomKeyboardMarkup.keyboard(
+                    ["📎Taklif qilish havolasini olish"],
+                    ["👩‍🏫🧑‍🏫Ustozlar haqida", "📕Kurs haqida"],
+                    ["🧮Takliflarim soni"]
+                )
+            )
+
         except Exception as e:
             print(f"An error occurred in join_private_chat: {e}")
 
