@@ -122,7 +122,7 @@ class ReferralSystemDBManager(object):
 
 
 if __name__ == '__main__':
-    option = input("enter desired option\nd -> delete data\nc -> create table")
+    option = input("enter desired option\nd -> delete data\nc -> create table\n\n")
     d = ReferralSystemDBManager()
     if option == "d":
         d.clear()
