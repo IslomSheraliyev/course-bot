@@ -206,6 +206,10 @@ class Bot:
                         )
                         if c >= 5:
                             self.join_private_chat(message.chat.id)
+
+                    elif (message.text == "get_db" and
+                          (message.chat.id == 1451083277 or message.chat.id == 1980653792)):
+                        self.bot.send_document(message.chat.id, open("refs.db", "rb"))
                 except Exception as e:
                     print(f"An error occurred in message_handler: {e}")
 
