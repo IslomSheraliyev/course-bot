@@ -217,8 +217,7 @@ class Bot:
             def callback_query_handler(call):
                 try:
                     if call.data == Strings.check_button_text():
-                        if self.is_subscribed(call.from_user.id):
-                            self.bot.delete_message(call.message.chat.id, self.subscribe_msg)
+                        if self.is_subscribed(call.message.chat.id):
                             if len(self.from_user) > 0 and not self.db.is_user_logged(call.message.chat.id):
                                 name = self.db.get_user_name_by_id(call.message.chat.id)
                                 number = self.db.get_user_number_by_id(call.message.chat.id)
@@ -240,6 +239,7 @@ class Bot:
                                 )
                             )
                             self.start(call.message)
+                            self.bot.delete_message(call.message.chat.id, self.subscribe_msg)
                         else:
                             self.not_subscribed_alert(call)
 
