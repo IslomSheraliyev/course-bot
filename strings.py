@@ -107,3 +107,7 @@ Kursga yozilish uchun shartlarni bajaring 🫠</b>"""
     @staticmethod
     def join_private_channel():
         return """<b>🥳 Tabriklaymiz, bizni maxsus kanalga qo'shilishingiz mumkin!</b>"""
+
+    @staticmethod
+    def referral_desc():
+        return "<b>😊 Siz mana shu postni tarqatishingiz yetarli bo'ladi. Siz uchun maxsus LINK shu postni o'zida joylangan</b>"

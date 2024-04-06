@@ -245,6 +245,7 @@ class Bot:
 
                     if call.data == Strings.referral_button_text():
                         self.get_referral(call)
+                        self.bot.send_message(call.message.chat.id, Strings.referral_desc(), parse_mode="HTML")
                 except Exception as e:
                     print(f"An error occurred in callback_query_handler: {e}")
 
