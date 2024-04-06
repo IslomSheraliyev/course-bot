@@ -110,7 +110,6 @@ class Bot:
     def get_referral(self, call):
         try:
             self.bot.answer_callback_query(call.id, Strings.referral())
-            self.bot.delete_message(call.message.chat.id, self.description_msg)
             self.bot.send_photo(
                 call.message.chat.id,
                 photo=open('banner.jpg', 'rb'),
@@ -122,6 +121,7 @@ class Bot:
                     ["🧮Takliflarim soni"]
                 )
             )
+            self.bot.delete_message(call.message.chat.id, self.description_msg)
         except Exception as e:
             print(f"An error occurred in get_referral: {e}")
 
