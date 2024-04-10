@@ -43,9 +43,14 @@ class ReferralSystemDBUtils(object):
         return "SELECT name FROM referrals WHERE user_id = ?"
 
     @staticmethod
-    def get_user_number_by_id(user_id):
+    def get_user_number_by_id():
         return "SELECT number FROM referrals WHERE user_id = ?"
 
     @staticmethod
     def clear_table():
         return "DELETE FROM referrals"
+
+    @staticmethod
+    def remove_user(user_id):
+        return "DELETE FROM referrals WHERE user_id = ?"
+

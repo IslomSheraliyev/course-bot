@@ -110,9 +110,23 @@ class ReferralSystemDBManager(object):
         try:
             connection = sqlite3.connect('refs.db')
             cursor = connection.cursor()
-            cursor.execute(db.get_user_number_by_id(user_id), (user_id,))
+            cursor.execute(db.get_user_number_by_id(), (user_id,))
             result = cursor.fetchone()
             return result[0] if result else None
+        except sqlite3.Error as e:
+            print("Error fetching user by id:", e)
+            return None
+        finally:
+            if connection:
+                connection.close()
+
+    @staticmethod
+    def remove_user_by_id(user_id):
+        try:
+            connection = sqlite3.connect('refs.db')
+            cursor = connection.cursor()
+            cursor.execute(db.remove_user(user_id))
+
         except sqlite3.Error as e:
             print("Error fetching user by id:", e)
             return None
@@ -128,5 +142,8 @@ if __name__ == '__main__':
         d.clear()
     elif option == "c":
         d.create_table()
+    elif option == "r":
+        user_id = input()
+        d.remove_user_by_id(user_id)
     else:
         option = input("enter desired option\nd -> delete data\nc -> create table")
