@@ -136,14 +136,14 @@ class ReferralSystemDBManager(object):
 
 
 if __name__ == '__main__':
-    option = input("enter desired option\nd -> delete data\nc -> create table\n\n")
+    option = input("enter desired option\nd -> delete data\nc -> create table\nr -> remove user by id\n")
     d = ReferralSystemDBManager()
     if option == "d":
         d.clear()
     elif option == "c":
         d.create_table()
     elif option == "r":
-        user_id = input()
+        user_id = input("enter user_id")
         d.remove_user_by_id(user_id)
     else:
         option = input("enter desired option\nd -> delete data\nc -> create table")
