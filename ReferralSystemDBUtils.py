@@ -51,6 +51,6 @@ class ReferralSystemDBUtils(object):
         return "DELETE FROM referrals"
 
     @staticmethod
-    def remove_user(user_id):
+    def remove_user():
         return "DELETE FROM referrals WHERE user_id = ?"
 

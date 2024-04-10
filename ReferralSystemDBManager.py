@@ -125,7 +125,7 @@ class ReferralSystemDBManager(object):
         try:
             connection = sqlite3.connect('refs.db')
             cursor = connection.cursor()
-            cursor.execute(db.remove_user(user_id))
+            cursor.execute(db.remove_user(), (user_id,))
 
         except sqlite3.Error as e:
             print("Error fetching user by id:", e)
