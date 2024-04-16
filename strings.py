@@ -114,4 +114,4 @@ Kursga yozilish uchun shartlarni bajaring 🫠</b>"""
 
     @staticmethod
     def welcome_lite(name: str):
-        return f"<b>Assalomu alaykum, {name}\n️Iltimos ism-familiyangizni yuboring...</b>"
+        return f"<b>😊 Assalomu alaykum, {name}\n️Iltimos ism-familiyangizni yuboring...</b>"
