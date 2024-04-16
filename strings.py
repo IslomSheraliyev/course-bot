@@ -111,3 +111,7 @@ Kursga yozilish uchun shartlarni bajaring 🫠</b>"""
     @staticmethod
     def referral_desc():
         return "<b>😊 Siz mana shu postni tarqatishingiz yetarli bo'ladi. Siz uchun maxsus LINK shu postni o'zida joylangan</b>"
+
+    @staticmethod
+    def welcome_lite(name: str):
+        return f"<b>Assalomu alaykum, {name}\n️Iltimos ism-familiyangizni yuboring...</b>"
